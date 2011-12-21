@@ -33,7 +33,7 @@ NSString *const PTPusherChannelKey = @"channel";
     if ([data respondsToSelector:@selector(dataUsingEncoding:)]) {
       NSError *error = nil;
 
-        _data = [[NSJSONSerialization JSONObjectWithData:data options:0 error:&error] copy];
+        _data = [[NSJSONSerialization JSONObjectWithData:[data dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error] copy];
 
       if (error) {
         _data = [data copy];
