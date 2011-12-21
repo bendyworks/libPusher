@@ -8,7 +8,6 @@
 
 #import "PTPusherAPI.h"
 #import "PTURLRequestOperation.h"
-#import "JSONKit.h"
 #import "NSString+Hashing.h"
 #import "NSDictionary+QueryString.h"
 
@@ -40,7 +39,10 @@
 - (void)triggerEvent:(NSString *)eventName onChannel:(NSString *)channelName data:(id)eventData socketID:(NSString *)socketID
 {
   NSString *path = [NSString stringWithFormat:@"/apps/%@/channels/%@/events", appID, channelName];
-  NSData *bodyData = [eventData JSONData];
+    
+    NSError *error = nil;
+    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:eventData options:0 error:&error];
+    
   NSString *bodyString = [[[NSString alloc] initWithData:bodyData encoding:NSUTF8StringEncoding] autorelease];
   
   NSMutableDictionary *queryParameters = [NSMutableDictionary dictionary];

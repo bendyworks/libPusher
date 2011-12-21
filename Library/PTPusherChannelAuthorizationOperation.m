@@ -8,7 +8,6 @@
 
 #import "PTPusherChannelAuthorizationOperation.h"
 #import "NSDictionary+QueryString.h"
-#import "JSONKit.h"
 
 @interface PTPusherChannelAuthorizationOperation ()
 @property (nonatomic, retain, readwrite) NSDictionary *authorizationData;
@@ -48,7 +47,9 @@
   [super finish];
   
   authorized = ([(NSHTTPURLResponse *)URLResponse statusCode] == 200);
-  authorizationData = [responseData objectFromJSONData];
+
+    NSError *error = nil;
+    authorizationData = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
 
   if (self.completionHandler) {
     self.completionHandler(self);

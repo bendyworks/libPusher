@@ -108,8 +108,6 @@
 		A3A9FA4D1496EEB300F83617 /* SpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A9F96D1496E9E500F83617 /* SpecHelper.m */; };
 		A3A9FA4E1496EECE00F83617 /* libPusher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D1D2B71158013F009A12AD /* libPusher.a */; };
 		A3A9FA4F1496EEE000F83617 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D1D0B51157CCDE009A12AD /* CFNetwork.framework */; };
-		A3A9FA73149709ED00F83617 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A9FA70149709ED00F83617 /* JSONKit.h */; };
-		A3A9FA74149709ED00F83617 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A9FA71149709ED00F83617 /* JSONKit.m */; };
 		A3AC28B613F75530001C4808 /* PTURLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3AC28B413F75530001C4808 /* PTURLRequestOperation.h */; };
 		A3AC28B713F75530001C4808 /* PTURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AC28B513F75530001C4808 /* PTURLRequestOperation.m */; };
 		A3AC28BF13F75BF1001C4808 /* PusherExampleMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A3AC28BC13F75BF1001C4808 /* PusherExampleMenuViewController.h */; };
@@ -882,7 +880,6 @@
 				A3AC28BF13F75BF1001C4808 /* PusherExampleMenuViewController.h in Headers */,
 				A3AC28C313F76C51001C4808 /* PTPusherChannelAuthorizationOperation.h in Headers */,
 				A3C8EA1114216EF1000E4D81 /* ZTWebSocket.h in Headers */,
-				A3A9FA73149709ED00F83617 /* JSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1195,7 +1192,6 @@
 				A3AC28C013F75BF1001C4808 /* PusherExampleMenuViewController.m in Sources */,
 				A3AC28C413F76C51001C4808 /* PTPusherChannelAuthorizationOperation.m in Sources */,
 				A3C8EA1214216EF1000E4D81 /* ZTWebSocket.m in Sources */,
-				A3A9FA74149709ED00F83617 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
